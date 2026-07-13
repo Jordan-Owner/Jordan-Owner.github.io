@@ -1,3 +1,4 @@
 .claude/
 *.pdf
+!assets/downloads/*.pdf
 profile-original-backup.jpg
