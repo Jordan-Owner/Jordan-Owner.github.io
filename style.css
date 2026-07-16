@@ -528,6 +528,7 @@ section h2 {
 
 .dashboard-bar-fill {
   width: 100%;
+  border-radius: 6px 6px 0 0;
   background: linear-gradient(180deg, var(--accent), var(--accent-dim));
   color: var(--bg);
   font-family: var(--mono);
@@ -563,6 +564,7 @@ section h2 {
     min-width: 0;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: start;
     gap: 0.5rem;
   }
 
