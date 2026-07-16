@@ -56,7 +56,7 @@
       <div class="testimonial-header-row">
         <h3 class="testimonial-group-heading">Algoma University Business Society</h3>
         <div class="resume-actions">
-          <a href="assets/downloads/AUBS-Testimonials.pdf" target="_blank" rel="noopener noreferrer" class="cta cta-small">View full PDF →</a>
+          <a href="assets/downloads/AUBS-Testimonials.pdf" target="_blank" rel="noopener noreferrer" class="cta cta-small" data-pdf-modal="Algoma University Business Society — Testimonials">View full PDF →</a>
           <a href="assets/downloads/AUBS-Testimonials.pdf" download class="cta cta-small cta-secondary">Download</a>
         </div>
       </div>
@@ -80,7 +80,7 @@
       <div class="testimonial-header-row">
         <h3 class="testimonial-group-heading">Natural High Performer Coaching</h3>
         <div class="resume-actions">
-          <a href="assets/downloads/Coaching-Testimonials.pdf" target="_blank" rel="noopener noreferrer" class="cta cta-small">View full PDF →</a>
+          <a href="assets/downloads/Coaching-Testimonials.pdf" target="_blank" rel="noopener noreferrer" class="cta cta-small" data-pdf-modal="Natural High Performer — Coaching Testimonials">View full PDF →</a>
           <a href="assets/downloads/Coaching-Testimonials.pdf" download class="cta cta-small cta-secondary">Download</a>
         </div>
       </div>
@@ -248,6 +248,17 @@
   <footer>
     <p>&copy; <span id="year"></span> Jordan Tomasone. Built with Claude Code.</p>
   </footer>
+
+  <div id="pdf-modal" class="pdf-modal" aria-hidden="true">
+    <div class="pdf-modal-backdrop" data-pdf-close></div>
+    <div class="pdf-modal-content">
+      <div class="pdf-modal-header">
+        <span class="pdf-modal-title" id="pdf-modal-title"></span>
+        <button type="button" class="pdf-modal-close" data-pdf-close aria-label="Close preview">✕</button>
+      </div>
+      <iframe id="pdf-modal-frame" class="pdf-modal-frame" title="PDF preview"></iframe>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
