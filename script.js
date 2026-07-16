@@ -43,6 +43,11 @@ function renderDashboard() {
   const tier = today.av >= 80 ? "Diamond Tier" : today.av >= 70 ? "Gold Tier" : "Bronze Tier";
 
   document.getElementById("dash-score").textContent = today.av;
+  document.getElementById("dash-date").textContent = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
   document.getElementById("dash-tier").textContent = tier;
   document.getElementById("dash-delta").textContent = delta === 0 ? "— 0" : delta > 0 ? `↑ ${delta}` : `↓ ${Math.abs(delta)}`;
 
