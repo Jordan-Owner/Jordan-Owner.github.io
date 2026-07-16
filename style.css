@@ -246,6 +246,93 @@ section h2 {
   border-radius: 4px;
 }
 
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.resume-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-dim);
+}
+
+.resume-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.cta-secondary {
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
+.cta-secondary:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.resume-formats summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.resume-formats summary::-webkit-details-marker {
+  display: none;
+}
+
+.resume-formats summary::before {
+  content: "+ ";
+  color: var(--accent);
+}
+
+.resume-formats[open] summary::before {
+  content: "− ";
+}
+
+.resume-formats summary:hover {
+  color: var(--text);
+}
+
+.resume-formats-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.resume-formats-links a {
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.resume-formats-links a:hover {
+  color: var(--accent);
+}
+
 .testimonial-group-heading {
   font-family: var(--mono);
   font-size: 0.95rem;
@@ -361,6 +448,13 @@ section h2 {
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-score-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
   margin-bottom: 0.75rem;
 }
 
