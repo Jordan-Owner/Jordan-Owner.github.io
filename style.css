@@ -32,6 +32,39 @@ a {
   text-decoration: none;
 }
 
+/* Floating nav (appears when scrolling up past the hero) */
+
+.floating-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6vw;
+  background: rgba(10, 14, 20, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+.floating-nav.visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+  .floating-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.6rem;
+    padding: 0.85rem 4vw;
+  }
+}
+
 /* Header / Hero */
 
 .hero {

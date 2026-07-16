@@ -59,3 +59,31 @@ function renderDashboard() {
 }
 
 renderDashboard();
+
+(function () {
+  const floatingNav = document.getElementById("floating-nav");
+  const heroNav = document.querySelector(".hero nav");
+  if (!floatingNav || !heroNav) return;
+
+  let lastScrollY = window.scrollY;
+
+  function updateNav() {
+    const currentScrollY = window.scrollY;
+    const scrollingUp = currentScrollY < lastScrollY;
+    const heroNavVisible = heroNav.getBoundingClientRect().bottom > 0;
+
+    if (scrollingUp && !heroNavVisible) {
+      floatingNav.classList.add("visible");
+    } else if (!scrollingUp || heroNavVisible) {
+      floatingNav.classList.remove("visible");
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener("scroll", updateNav, { passive: true });
+
+  floatingNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => floatingNav.classList.remove("visible"));
+  });
+})();
